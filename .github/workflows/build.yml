@@ -1,6 +1,10 @@
 name: build
 
-on: [push, pull_request]
+on:
+  push:
+  repository_dispatch:
+    types: [build]
+  #pull_request:
 
 jobs:
   build:
